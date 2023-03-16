@@ -14,9 +14,10 @@
     $resultado = $sentencia->execute([$nombre, $id_pozo]);
 
     if ($resultado === TRUE) {
-        header('Location: index.php?mensaje=editado');
+        echo "<script>window.location.href='index.php?mensaje=editado';</script>";
     } else {
-        header('Location: index.php?mensaje=error');
+        echo "<script>window.location.href='index.php?mensaje=error';</script>";
+
         exit();
     }
     

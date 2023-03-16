@@ -13,10 +13,10 @@
     $sentencia = $bd->prepare("INSERT INTO pozo(nombre) VALUES(?);");
     $resultado = $sentencia->execute([$nombre]);
 
-    if ($resultado === TRUE) {
-       header('Location: index.php?mensaje=registrado');
+    if ($resultado) {
+        echo "<script>window.location.href='index.php?mensaje=registrado';</script>";
     } else {
-        header('Location: index.php?mensaje=error');
+        echo "<script>window.location.href='index.php?mensaje=error';</script>";
         exit();
     }
     

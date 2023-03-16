@@ -14,10 +14,10 @@
     $sentencia = $bd->prepare("INSERT INTO medicion(psi,pozo_id) VALUES(?,?);");
     $resultado = $sentencia->execute([$medicion,$pozo_id]);
 
-    if ($resultado === TRUE) {
-       header('Location: agregar.php?mensaje=registrado&id_pozo='.$pozo_id.'');
+    if ($resultado) {
+        echo "<script>window.location.href='agregar.php?mensaje=registrado&id_pozo=$pozo_id';</script>";
     } else {
-        header('Location: agregar.php?mensaje=error&id_pozo='.$pozo_id.'');
+        echo "<script>window.location.href='agregar.php?mensaje=error&id_pozo=$pozo_id';</script>";
         exit();
     }
     

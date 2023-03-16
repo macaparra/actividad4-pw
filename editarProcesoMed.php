@@ -15,9 +15,9 @@
     $resultado = $sentencia->execute([$psi, $id_medicion]);
 
     if ($resultado === TRUE) {
-        header('Location: agregar.php?mensaje=editado&id_pozo='.$id_pozo);
+        echo "<script>window.location.href='agregar.php?mensaje=editado&id_pozo=$id_pozo'</script>";
     } else {
-        header('Location: agregar.php?mensaje=error&id_pozo='.$id_pozo);
+        echo "<script>window.location.href='Location: agregar.php?mensaje=error&id_pozo=$id_pozo';</script>";
         exit();
     }
     
