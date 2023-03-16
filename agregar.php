@@ -102,7 +102,7 @@
                                 <td scope="row"><?php echo $dato->id_medicion;?></td>
                                 <td><?php echo $dato->psi;?></td>
                                 <td><?php echo $dato->fecha;?></td>
-                                <td><a class="text-primary" href="grafica.php?id_medicion=<?php echo $dato->id_medicion; ?>"><i class="bi bi-graph-up"></i></a></td>
+                                <td><a class="text-primary" href="grafica.php?id_medicion=<?php echo $dato->id_medicion; ?>&id_pozo=<?php echo $_GET['id_pozo'] ?>&date=<?php echo $dato->fecha ?>"><i class="bi bi-graph-up"></i></a></td>
                                 <td><a class="text-success" href="editarMedicion.php?id_medicion=<?php echo $dato->id_medicion; ?>&id_pozo=<?php echo $_GET['id_pozo'] ?>"><i class="bi bi-pencil-square"></i></a></td>
                                 <td><a onclick="return confirm('Estas seguro de eliminar?');" class="text-danger" href="eliminarMedicion.php?id_medicion=<?php echo $dato->id_medicion; ?><?php echo '&id_pozo='.$_GET['id_pozo']?>"><i class="bi bi-trash"></i></a></td>
                             </tr>

@@ -108,3 +108,8 @@ body{
     align-items: center;
     margin-left: 15%;
 }
+
+.btn{
+    background-color: #ed1c24;
+    color: white;
+}
